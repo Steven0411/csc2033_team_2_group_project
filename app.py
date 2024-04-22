@@ -7,6 +7,7 @@ app = Flask(__name__)
 def homepage():
     return render_template('main/index.html')
 
-@app.route('/quiz')
-def quiz():
-    render_template('quiz/quiz.html')
+
+from quiz.views import quiz_blueprint
+
+app.register_blueprint(quiz_blueprint)
