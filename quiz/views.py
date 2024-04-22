@@ -6,4 +6,3 @@ quiz_blueprint = Blueprint('quiz', __name__, template_folder='templates')
 @quiz_blueprint.route('/quiz')
 def quiz():
     return render_template('quiz/quiz.html')
-
